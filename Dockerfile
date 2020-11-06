@@ -97,6 +97,8 @@ VOLUME \
 
 FROM build7 as build8
 EXPOSE 80 443 9000
+RUN	pip3 install --upgrade pip
+RUN	pip3 install --upgrade opencv-python
 
 FROM build8
 CMD ["/sbin/my_init"]
